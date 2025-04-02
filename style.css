@@ -1,0 +1,115 @@
+:root {
+	--text-color: #FFFFFF;
+	--bg-url: url("./assets/bg-mobile.jpg");
+}
+
+.light {
+	--text-color: #000000;
+	--bg-url: url("./assets/bg-mobile-light.jpg");
+}
+
+* {
+	font-family: "Inter", sans-serif;
+	color: var(--text-color);
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	/* background-image: url("./assets/bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; */
+
+	/* Background: color image repeat position/size ----> Isso é uma versão simplificada, mas tem que seguir essa ordem */
+	background: var(--bg-url) no-repeat top center/cover;
+}
+
+#container {
+	/* height: 712px; */
+	width: 360px;
+	/* border: 1px solid #fff; */
+	margin: auto;
+	margin-top: 56px;
+	padding: 0px 24px;
+}
+
+#profile {
+	text-align: center;
+	padding: 24px;
+}
+
+#profile img {
+	width: 112px;
+	margin: auto;
+	/* border: 1px solid #fff; */
+	/* display: block; */
+}
+
+#profile p {
+	font-weight: 500;
+	line-height: 24px;
+	margin-top: 8px;
+}
+
+/* LINKS */
+
+#links ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 24px 0px;
+}
+
+#links a {
+	text-decoration: none;
+	font-weight: 500;
+}
+
+#links li {
+	transition: background .2s;
+	display: flex;
+	padding: 16px 24px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.50);
+	background: rgba(255, 255, 255, 0.10);
+	backdrop-filter: blur(4px);
+}
+
+#links li:hover {
+	border: 1.5px solid var(--text-color-dark-mode, var(--text-color));
+	background: var(--surface-color-dark-mode-hover, rgba(255, 255, 255, 0.05));
+}
+
+/* social-links */
+
+#social-links {
+	/* border: 1px solid #fff; */
+	display: flex;
+	padding: 24px 0px;
+	justify-content: center;
+	/* gap: 32px; */
+	font-size: 24px;
+}
+
+.logo {
+	padding: 16px;
+	transition: background .2s;
+	border-radius: 50%;
+}
+
+.logo:hover {
+	background-color: rgba(255, 255, 255, 0.20);
+	/* padding: 8px; */
+}
+
+footer {
+	/* border: 1px solid #fff; */
+	text-align: center;
+	padding: 24px;
+	font-size: 14px;
+}
