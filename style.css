@@ -3,6 +3,7 @@
 	--bg-url: url("./assets/bg-mobile.jpg");
 	--stroke-color: rgba(255, 255, 255, 0.50);
 	--surface-color: rgba(255, 255, 255, 0.10);
+	--switch-url: url(./assets/moon-stars.svg);
 }
 
 .light {
@@ -11,7 +12,9 @@
 	--stroke-color: rgba(0, 0, 0, 0.50);
 	--surface-color: rgba(0, 0, 0, 0.05);
 	--highlight-color-light-mode: #0000001A;
+	--switch-url: url(./assets/sun.svg);
 }
+
 
 * {
 	font-family: "Inter", sans-serif;
@@ -118,4 +121,39 @@ footer {
 	text-align: center;
 	padding: 24px;
 	font-size: 14px;
+}
+
+.switch {
+	/* border: 1px solid red; */
+	position: relative;
+	width: 64px;
+	margin: 4px auto;
+}
+
+.switch button {
+	width: 32px;
+	height: 32px;
+	background: white var(--switch-url) no-repeat center;
+	border: none;
+	border-radius: 50%;
+
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+	transform: translateY(-50%);
+}
+
+.light .switch button {
+	right: 0;
+	left: initial;
+}
+
+.switch span {
+	display: block;
+	border-radius: 99999px;
+	width: 64px;
+	height: 24px;
+	border: 1px solid var(--stroke-color);
+	background: var(--surface-color);
+	backdrop-filter: blur(4px);
 }
