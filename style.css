@@ -36,7 +36,8 @@ body {
 
 #container {
 	/* height: 712px; */
-	width: 360px;
+	width: 100%;
+	max-width: 588px;
 	/* border: 1px solid #fff; */
 	margin: auto;
 	margin-top: 56px;
